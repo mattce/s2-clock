@@ -1,0 +1,25 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="utf-8")
+        title S2 Clock Example
+        meta(name="viewport", content="width=device-width,minimum-scale=1.0,initial-scale=1,user-scalable=yes")
+        link(rel="stylesheet", href="dist/css/main.css")
+        script(src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.min.js")
+        script(src="dist/js/clock.js")
+    body
+        div.wrapper
+            div.clock
+                ul.clock__face
+                    - for (var i = 0; i < 30; i++) {
+                    if (i % 5 == 0)
+                        li.clock__digit.clock__digit--hour
+                    else
+                        li.clock__digit.clock__digit--minute
+                    - }
+                div.clock__handle.clock__handle--hours
+                    div.clock__handle-body
+                div.clock__handle.clock__handle--minutes
+                    div.clock__handle-body
+                div.clock__handle.clock__handle--seconds
+                    div.clock__handle-body
