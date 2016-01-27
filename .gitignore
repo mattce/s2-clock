@@ -97,5 +97,5 @@ node_modules
 *.css.map
 
 
-### Custom ###
-dist/
+### Custom Folders ###
+dist

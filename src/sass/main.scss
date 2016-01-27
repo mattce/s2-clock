@@ -12,6 +12,7 @@ body {
     margin: 0 auto;
     font-size: 4vw;
     @media screen and (min-width: 600px) {
+        font-size: 20px;
         max-width: 575px;
     }
 }
@@ -84,13 +85,13 @@ body {
     .clock__handle--hours & {
         width: 20%;
         transform: translate(0%, -50%);
-        animation: tic 24 * 60 * 60s linear infinite;
+        animation: tick 24 * 60 * 60s linear infinite;
         transform-origin: 0 0;
     }
 
     .clock__handle--minutes & {
         width: 35%;
-        animation: tic 60 * 60s linear infinite;
+        animation: tick 60 * 60s linear infinite;
         transform-origin: 0 0;
     }
 
@@ -98,7 +99,7 @@ body {
         background-color: red;
         height: 0.15em;
         width: 38%;
-        animation: tic 60s linear infinite;
+        animation: tick 60s linear infinite;
         transform-origin: 0 0;
 
         &:after {
@@ -115,7 +116,7 @@ body {
 
 }
 
-@keyframes tic {
+@keyframes tick {
     from {
         -webkit-transform: rotateZ(0deg) translate(0, -50%);
         transform: rotateZ(0deg) translate(0, -50%);

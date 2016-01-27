@@ -1,7 +1,15 @@
 #S2 Clock
 
-##Prerequisits
+##Setup
 1. install [Node and Npm](https://nodejs.org/en/)
-2. install [CoffeeScript](http://coffeescript.org/) via `npm install -g coffee-script`
-3. install [Jade](http://jade-lang.com/) via `npm install -g jade`
-4. install local dependencies via `npm install`
+2. install local dependencies via `npm install`
+
+##Build
+The Setup uses simple npm scripts to build the application.
+
+To start the application run `npm start`.
+This cleans the dist folder, generates CSS (through Sass), JavaScript (through CoffeeScript) and HTML (through Jade) and
+starts a on ´localhost:3000´
+To solely generate CSS, run `npm run sass`
+To solely generate JavaScript, run `npm run coffee`
+To solely generate HTML, run `npm run jade`
