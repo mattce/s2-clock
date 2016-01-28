@@ -1,0 +1,228 @@
+* {
+  box-sizing: border-box;
+  border: 0; }
+
+body {
+  background-color: #333; }
+
+.wrapper {
+  font-size: 4vw;
+  margin: 0 auto;
+  padding: 50px; }
+  @media screen and (min-width: 600px) {
+    .wrapper {
+      font-size: 20px;
+      max-width: 575px; } }
+
+/*
+<div class="clock">
+    <ul class="clock__face">
+        <li class="clock__digit clock__digit--hour"></li>
+    </ul>
+    <div class="clock__handle clock__handle--hours">
+        <div class="clock__handle-body"></div>
+    </div>
+    <div class="clock__handle clock__handle--minutes">
+        <div class="clock__handle-body"></div>
+    </div>
+    <div class="clock__handle clock__handle--seconds">
+        <div class="clock__handle-body"></div>
+    </div>
+</div>
+*/
+.clock {
+  width: 100%;
+  height: 0;
+  position: relative;
+  padding-top: 100%; }
+
+.clock__face {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin: 0;
+  border: solid 0.4em white;
+  border-radius: 50%; }
+
+.clock__digit {
+  display: block;
+  width: 100%;
+  height: 0.25em;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  background-color: transparent;
+  border-style: solid;
+  border-color: white;
+  border-left-width: 1em;
+  border-right-width: 1em;
+  transform-origin: 50%; }
+  .clock__digit.clock__digit--hour {
+    border-color: white; }
+  .clock__digit.clock__digit--minute {
+    height: 0.15em;
+    border-left-width: 0.6em;
+    border-right-width: 0.6em;
+    border-color: #999; }
+  .clock__digit:nth-child(1) {
+    -webkit-transform: translate(-50%, -50%) rotateZ(0deg);
+    -ms-transform: translate(-50%, -50%) rotateZ(0deg);
+    transform: translate(-50%, -50%) rotateZ(0deg); }
+  .clock__digit:nth-child(2) {
+    -webkit-transform: translate(-50%, -50%) rotateZ(6deg);
+    -ms-transform: translate(-50%, -50%) rotateZ(6deg);
+    transform: translate(-50%, -50%) rotateZ(6deg); }
+  .clock__digit:nth-child(3) {
+    -webkit-transform: translate(-50%, -50%) rotateZ(12deg);
+    -ms-transform: translate(-50%, -50%) rotateZ(12deg);
+    transform: translate(-50%, -50%) rotateZ(12deg); }
+  .clock__digit:nth-child(4) {
+    -webkit-transform: translate(-50%, -50%) rotateZ(18deg);
+    -ms-transform: translate(-50%, -50%) rotateZ(18deg);
+    transform: translate(-50%, -50%) rotateZ(18deg); }
+  .clock__digit:nth-child(5) {
+    -webkit-transform: translate(-50%, -50%) rotateZ(24deg);
+    -ms-transform: translate(-50%, -50%) rotateZ(24deg);
+    transform: translate(-50%, -50%) rotateZ(24deg); }
+  .clock__digit:nth-child(6) {
+    -webkit-transform: translate(-50%, -50%) rotateZ(30deg);
+    -ms-transform: translate(-50%, -50%) rotateZ(30deg);
+    transform: translate(-50%, -50%) rotateZ(30deg); }
+  .clock__digit:nth-child(7) {
+    -webkit-transform: translate(-50%, -50%) rotateZ(36deg);
+    -ms-transform: translate(-50%, -50%) rotateZ(36deg);
+    transform: translate(-50%, -50%) rotateZ(36deg); }
+  .clock__digit:nth-child(8) {
+    -webkit-transform: translate(-50%, -50%) rotateZ(42deg);
+    -ms-transform: translate(-50%, -50%) rotateZ(42deg);
+    transform: translate(-50%, -50%) rotateZ(42deg); }
+  .clock__digit:nth-child(9) {
+    -webkit-transform: translate(-50%, -50%) rotateZ(48deg);
+    -ms-transform: translate(-50%, -50%) rotateZ(48deg);
+    transform: translate(-50%, -50%) rotateZ(48deg); }
+  .clock__digit:nth-child(10) {
+    -webkit-transform: translate(-50%, -50%) rotateZ(54deg);
+    -ms-transform: translate(-50%, -50%) rotateZ(54deg);
+    transform: translate(-50%, -50%) rotateZ(54deg); }
+  .clock__digit:nth-child(11) {
+    -webkit-transform: translate(-50%, -50%) rotateZ(60deg);
+    -ms-transform: translate(-50%, -50%) rotateZ(60deg);
+    transform: translate(-50%, -50%) rotateZ(60deg); }
+  .clock__digit:nth-child(12) {
+    -webkit-transform: translate(-50%, -50%) rotateZ(66deg);
+    -ms-transform: translate(-50%, -50%) rotateZ(66deg);
+    transform: translate(-50%, -50%) rotateZ(66deg); }
+  .clock__digit:nth-child(13) {
+    -webkit-transform: translate(-50%, -50%) rotateZ(72deg);
+    -ms-transform: translate(-50%, -50%) rotateZ(72deg);
+    transform: translate(-50%, -50%) rotateZ(72deg); }
+  .clock__digit:nth-child(14) {
+    -webkit-transform: translate(-50%, -50%) rotateZ(78deg);
+    -ms-transform: translate(-50%, -50%) rotateZ(78deg);
+    transform: translate(-50%, -50%) rotateZ(78deg); }
+  .clock__digit:nth-child(15) {
+    -webkit-transform: translate(-50%, -50%) rotateZ(84deg);
+    -ms-transform: translate(-50%, -50%) rotateZ(84deg);
+    transform: translate(-50%, -50%) rotateZ(84deg); }
+  .clock__digit:nth-child(16) {
+    -webkit-transform: translate(-50%, -50%) rotateZ(90deg);
+    -ms-transform: translate(-50%, -50%) rotateZ(90deg);
+    transform: translate(-50%, -50%) rotateZ(90deg); }
+  .clock__digit:nth-child(17) {
+    -webkit-transform: translate(-50%, -50%) rotateZ(96deg);
+    -ms-transform: translate(-50%, -50%) rotateZ(96deg);
+    transform: translate(-50%, -50%) rotateZ(96deg); }
+  .clock__digit:nth-child(18) {
+    -webkit-transform: translate(-50%, -50%) rotateZ(102deg);
+    -ms-transform: translate(-50%, -50%) rotateZ(102deg);
+    transform: translate(-50%, -50%) rotateZ(102deg); }
+  .clock__digit:nth-child(19) {
+    -webkit-transform: translate(-50%, -50%) rotateZ(108deg);
+    -ms-transform: translate(-50%, -50%) rotateZ(108deg);
+    transform: translate(-50%, -50%) rotateZ(108deg); }
+  .clock__digit:nth-child(20) {
+    -webkit-transform: translate(-50%, -50%) rotateZ(114deg);
+    -ms-transform: translate(-50%, -50%) rotateZ(114deg);
+    transform: translate(-50%, -50%) rotateZ(114deg); }
+  .clock__digit:nth-child(21) {
+    -webkit-transform: translate(-50%, -50%) rotateZ(120deg);
+    -ms-transform: translate(-50%, -50%) rotateZ(120deg);
+    transform: translate(-50%, -50%) rotateZ(120deg); }
+  .clock__digit:nth-child(22) {
+    -webkit-transform: translate(-50%, -50%) rotateZ(126deg);
+    -ms-transform: translate(-50%, -50%) rotateZ(126deg);
+    transform: translate(-50%, -50%) rotateZ(126deg); }
+  .clock__digit:nth-child(23) {
+    -webkit-transform: translate(-50%, -50%) rotateZ(132deg);
+    -ms-transform: translate(-50%, -50%) rotateZ(132deg);
+    transform: translate(-50%, -50%) rotateZ(132deg); }
+  .clock__digit:nth-child(24) {
+    -webkit-transform: translate(-50%, -50%) rotateZ(138deg);
+    -ms-transform: translate(-50%, -50%) rotateZ(138deg);
+    transform: translate(-50%, -50%) rotateZ(138deg); }
+  .clock__digit:nth-child(25) {
+    -webkit-transform: translate(-50%, -50%) rotateZ(144deg);
+    -ms-transform: translate(-50%, -50%) rotateZ(144deg);
+    transform: translate(-50%, -50%) rotateZ(144deg); }
+  .clock__digit:nth-child(26) {
+    -webkit-transform: translate(-50%, -50%) rotateZ(150deg);
+    -ms-transform: translate(-50%, -50%) rotateZ(150deg);
+    transform: translate(-50%, -50%) rotateZ(150deg); }
+  .clock__digit:nth-child(27) {
+    -webkit-transform: translate(-50%, -50%) rotateZ(156deg);
+    -ms-transform: translate(-50%, -50%) rotateZ(156deg);
+    transform: translate(-50%, -50%) rotateZ(156deg); }
+  .clock__digit:nth-child(28) {
+    -webkit-transform: translate(-50%, -50%) rotateZ(162deg);
+    -ms-transform: translate(-50%, -50%) rotateZ(162deg);
+    transform: translate(-50%, -50%) rotateZ(162deg); }
+  .clock__digit:nth-child(29) {
+    -webkit-transform: translate(-50%, -50%) rotateZ(168deg);
+    -ms-transform: translate(-50%, -50%) rotateZ(168deg);
+    transform: translate(-50%, -50%) rotateZ(168deg); }
+  .clock__digit:nth-child(30) {
+    -webkit-transform: translate(-50%, -50%) rotateZ(174deg);
+    -ms-transform: translate(-50%, -50%) rotateZ(174deg);
+    transform: translate(-50%, -50%) rotateZ(174deg); }
+
+.clock__handle {
+  display: block;
+  width: 100%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  transform-origin: 0 0; }
+
+.clock__handle-body {
+  height: 0.3em;
+  background-color: white;
+  -webkit-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  transform-origin: 0 0; }
+  .clock__handle--hours .clock__handle-body {
+    width: 20%;
+    -webkit-transform: translate(0%, -50%);
+    -ms-transform: translate(0%, -50%);
+    transform: translate(0%, -50%); }
+  .clock__handle--minutes .clock__handle-body {
+    width: 35%; }
+  .clock__handle--seconds .clock__handle-body {
+    height: 0.15em;
+    width: 38%;
+    background-color: red; }
+    .clock__handle--seconds .clock__handle-body:after {
+      content: '';
+      display: block;
+      width: 0.5em;
+      height: 0.5em;
+      background-color: inherit;
+      border-radius: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%); }
+
+/*# sourceMappingURL=main.css.map */

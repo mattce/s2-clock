@@ -90,6 +90,7 @@ node_modules
 
 ### CoffeeScript ###
 *.js
+!src/js/*.js
 
 
 ### Sass ###

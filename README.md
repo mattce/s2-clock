@@ -8,8 +8,7 @@
 The Setup uses simple npm scripts to build the application.
 
 To start the application run `npm start`.
-This cleans the dist folder, generates CSS (through Sass), JavaScript (through CoffeeScript) and HTML (through Jade) and
-starts a on ´localhost:3000´
+This cleans the dist folder, generates CSS (through Sass), HTML (through Jade), copies over JavaScript and
+starts a server on ´localhost:3000´
 To solely generate CSS, run `npm run sass`
-To solely generate JavaScript, run `npm run coffee`
 To solely generate HTML, run `npm run jade`
